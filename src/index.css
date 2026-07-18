@@ -1,0 +1,86 @@
+@import 'https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Montserrat:wght@400;500;600;700;800;900&display=swap';
+@import 'tailwindcss';
+
+@theme inline {
+  --color-forest: #1B5E20;
+  --color-forest-dark: #145214;
+  --color-emerald: #2E7D32;
+  --color-emerald-light: #4CAF50;
+  --color-gold: #D4AF37;
+  --color-gold-light: #F0CC55;
+  --color-sky: #03A9F4;
+  --color-sky-dark: #0288D1;
+  --color-cream: #FDFBF5;
+  --color-charcoal: #1A1A1A;
+  --font-display: 'Montserrat', sans-serif;
+  --font-body: 'Poppins', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: #FDFBF5;
+  color: #1A1A1A;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-display);
+}
+
+/* Hide scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(27,94,32,0.3); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(27,94,32,0.6); }
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-fadeInUp { animation: fadeInUp 0.8s ease forwards; }
+.animate-fadeIn { animation: fadeIn 0.8s ease forwards; }
+.animate-slideInLeft { animation: slideInLeft 0.8s ease forwards; }
+.animate-float { animation: float 3s ease-in-out infinite; }
+
+.section-observe { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.section-observe.visible { opacity: 1; transform: translateY(0); }
+
+.glass {
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.25);
+}
+
+.gold-gradient {
+  background: linear-gradient(135deg, #D4AF37, #F0CC55, #D4AF37);
+}
+
+.green-gradient {
+  background: linear-gradient(135deg, #1B5E20, #2E7D32);
+}
